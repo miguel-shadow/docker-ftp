@@ -1,13 +1,15 @@
 version: "3.8"
 services:
   vsftpd:
-    image: panubo/vsftpd
+    # image: panubo/vsftpd # Arquitectura x64
+    image: pablokbs/panubo-vsftpd-arm # Aquitectura ARM
+    container_name: ftp
     environment:
       - FTP_USER=<usuario>
       - FTP_PASSWORD=<password>
     volumes:
-    # Los volumenes deben apuntar a /srv
-    - <ruta_local>:srv
+      # Los volumenes deben apuntar a /srv/<nombre>
+      - <ruta_local>:/srv/<nombre>
     expose:
       - 21
     network_mode: host
