@@ -7,6 +7,7 @@ services:
     environment:
       - FTP_USER=<usuario>
       - FTP_PASSWORD=<password>
+      - FTP_CHOWN_ROOT=true
     volumes:
       # Los volumenes deben apuntar a /srv/<nombre>
       - <ruta_local>:/srv/<nombre>
