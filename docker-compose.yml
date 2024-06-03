@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  vsftpd:
+    image: panubo/vsftpd
+    environment:
+      - FTP_USER=<usuario>
+      - FTP_PASSWORD=<password>
+    volumes:
+    # Los volumenes deben apuntar a /srv
+    - <ruta_local>:srv
+    expose:
+      - 21
+    network_mode: host
