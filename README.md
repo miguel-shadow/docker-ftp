@@ -1,4 +1,4 @@
-# 1. FTP
+# 1. Docker FTP
 Permite levantar un servidor FTP rápidamente con Docker
 
 # 2. Instalación
